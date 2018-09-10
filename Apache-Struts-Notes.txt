@@ -1,0 +1,11 @@
+Apache struts can be found with .action or .do 
+
+nmap -p8080 --script http-vuln-cve2017-5638 --script-args path= TARGET-IP
+
+that script checks if it is there. 
+
+Here is a good python script to use. 
+https://www.exploit-db.com/exploits/41570/
+
+Here is more information about apache struts vulnerability
+https://www.secjuice.com/apache-struts2-cve-2018-11776/

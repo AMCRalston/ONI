@@ -1,0 +1,8 @@
+Check for sudo rights 
+
+sudo -l 
+
+If there is a python that is calling a library  we can hi-jack it.
+https://rastating.github.io/privilege-escalation-via-python-library-hijacking/
+
+
