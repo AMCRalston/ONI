@@ -5,4 +5,46 @@ sudo -l
 If there is a python that is calling a library  we can hi-jack it.
 https://rastating.github.io/privilege-escalation-via-python-library-hijacking/
 
+SQL creds found? 
+--- Could be in the user.php file if they have it -----
+---Login to SQL 
+mysql -u user -p 
+\! /bin/sh 
+
+-----See if it escalates---
+
+---------run Len-Enum Scripts------- 
+
+--LinEnum.sh
+  bash LinEnum.sh
+--linuxprivchecker.py
+--unixprivesc.sh
+
+-Look at Kernal information--- See when it has been updated and if their are 
+any vulnerabilites for it.  --- Older Kernals (Dirty Cow, ETC)
+
+--Look for out of place Cronjobs that the file could be modified. Or files that you have write access to.
+
+-- Look at listening sockets for services that can be abused
+
+-- Look at service permissions to see if you have access to something that you could modify.
+
+
+--Look at Useful files 
+--Look to see what you can write too for sensitive files
+
+find / -perm -4000 2>/dev/null
+--This is done in the py script, but this is a fast check that can help out.
+
+
+--- Writible /etc/passwd file 
+
+Create a password then use openssl to encrypt it 
+
+openssl passwd -1 <THE PASSWORD>
+
+then vi, vim, or nano /etc/passwd
+add the password root:HERE:0:0:root:/bin/bash
+use the :w! to write 
+
 

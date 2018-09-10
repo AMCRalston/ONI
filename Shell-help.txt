@@ -1,0 +1,17 @@
+Using NetCat and Python to make shell clean and tab-ible 
+
+python -c 'import pty;pty.spawn("/bin/bash");'
+
+___BAcK ground NC with (Ctrl + Z) 
+
+stty raw -echo 
+
+Type fg then enter to get back to shell 
+
+----On another tab do an --- 
+echo $TERM
+
+----Go back to netcat---
+export TERM=
+
+
