@@ -22,3 +22,15 @@ information by leveraging the -ar and -dr (ARP and DNS Resolution) flags
 
 8. if there is any authentication or things happening we can relay, capture etc..  
 
+
+https://www.blackhillsinfosec.com/analyzing-arp-to-discover-exploit-stale-network-address-configurations/
+Has 
+Blue Recommendations
+
+    Configure network infrastructure to enforce Dynamic ARP Inspection (DAI), a control preventing the use of aliased IP addresses and ARP poisoning attacks by assuring ARP responses are honored only when the MAC to IP binding is present in an authoritative database (simplification)
+    Monitor for excessive ARP requests for a specific IP address within an unreasonable timeframe
+        Debian hosts cache a given ARP response for 60 seconds by default. This configuration can be inspected/configured by interacting with the following file:
+            /proc/sys/net/ipv4/neigh/default/gc_stale_time
+        Newer versions of Windows generate a value upon successful resolution but are marked “stale” if not used again between 15 and 45 seconds
+    Monitor for invalid DNS records that point to abandoned IPs since clients may be configured with the friendly value, resulting in SNAC
+    Though not tested, LaBrea (as recommended by @strandjs) should prevent detection and exploitation of SNACs by tarpitting hosts that exhibit SNAC behavior
