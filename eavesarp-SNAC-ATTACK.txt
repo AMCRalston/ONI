@@ -1,0 +1,24 @@
+A Stale Network Address Configuration "SNAC" attack is conducted as follows.
+
+1. Get eavesarp
+ https://github.com/arch4ngel/eavesarp
+
+2. Listen for arps on the network 
+	- sudo ./eavesarp.py capture -i eth0
+
+3. Once we have identified possible SNAC vulnerable hosts lets collect more 
+information by leveraging the -ar and -dr (ARP and DNS Resolution) flags
+       ctrl+c --> sudo ./eavesarp.py capture -i eth0 -ar -dr  
+
+4. Add the Stale target IP to our interface
+       - ip addr add <TargetIP>/24 dev eth0
+
+5. Conduct a packet capture of the interface...
+
+6. Use responder to capture creds... 
+
+7. MITM - if there is a PTR-FWD we can enable IP forwarding and MASQUERADE be a MITM between the two. 
+     -Run the eavesarp-MITM.sh with ips 
+
+8. if there is any authentication or things happening we can relay, capture etc..  
+
