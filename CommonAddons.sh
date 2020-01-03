@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get -y install build-essential cgps cifs-utils cmake giskismet gpsd gpsd-clients kismet libpcap-dev libpq-dev libsqlite3-dev libssl-dev lsb-core mingw-w64 putty-tools smbclient sparta tree xrdp cifs-utils crackmapexec hostapd-WPE shellter
+apt-get -y install build-essential cgps cifs-utils cmake giskismet gpsd gpsd-clients kismet libpcap-dev libpq-dev libsqlite3-dev libssl-dev lsb-core mingw-w64 putty-tools smbclient sparta tree xrdp cifs-utils crackmapexec hostapd-WPE >
 gem install gitrob pg ruby-nmap net-http-persistent mechanize text-table
 cd /opt/
 git clone https://github.com/lgandx/Responder.git
@@ -27,6 +27,10 @@ git clone https://github.com/TheRook/subbrute.git
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 git clone https://github.com/D35m0nd142/LFISuite.git
 git clone https://github.com/EmpireProject/Empire.git
+git clone https://github.com/AMCRalston/kali_plus.git
+git clone https://github.com/fox-it/mitm6.git
+git clone https://github.com/arch4ngel/eavesarp.git
+
 /opt/Empire/setup/install.sh
 pip install argparse
 pip install blessings
@@ -39,3 +43,5 @@ pip install urlparse
 pip install -U websocket
 pip install xlrd
 pip install snallygaster
+pip install -r /opt/mitm6/requirements.txt
+python3.7 -m pip install -2 /opt/eavesharp/requirements.txt
