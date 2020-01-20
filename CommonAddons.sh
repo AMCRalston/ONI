@@ -1,5 +1,6 @@
 #!/bin/bash
-apt-get -y install build-essential cgps cifs-utils cmake giskismet gpsd gpsd-clients kismet libpcap-dev libpq-dev libsqlite3-dev libssl-dev lsb-core mingw-w64 putty-tools smbclient sparta tree xrdp cifs-utils crackmapexec hostapd-WPE >
+apt-get -y install build-essential cgps cifs-utils cmake giskismet gpsd gpsd-clients kismet libpcap-dev libpq-dev libsqlite3-dev libssl-dev lsb-core mingw-w64 putty-tools smbclient sparta tree xrdp cifs-utils crackmapexec hostapd-WPE shellter
+
 gem install gitrob pg ruby-nmap net-http-persistent mechanize text-table
 cd /opt/
 git clone https://github.com/lgandx/Responder.git
